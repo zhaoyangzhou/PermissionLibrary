@@ -9,7 +9,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 
-import java.lang.ref.WeakReference;
+import java.lang.ref.SoftReference;
 
 /**
  * Package: com.zzy.learn.aspectj.aspect
@@ -52,7 +52,7 @@ public abstract class PermissionAspectj {
     /**
      * Method:  getCurrentActivity
      * Description: 获取当前显示的Activity引用
-     * @return  WeakReference<Activity>
+     * @return  SoftReference<Activity>
      */
-    public abstract WeakReference<Activity> getCurrentActivity();
+    public abstract SoftReference<Activity> getCurrentActivity();
 }
