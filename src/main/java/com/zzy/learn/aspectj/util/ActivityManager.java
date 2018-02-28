@@ -2,7 +2,7 @@ package com.zzy.learn.aspectj.util;
 
 import android.app.Activity;
 
-import java.lang.ref.WeakReference;
+import java.lang.ref.SoftReference;
 
 /**
  * Package: com.zzy.learn.aspectj.util
@@ -14,7 +14,7 @@ import java.lang.ref.WeakReference;
  */
 public class ActivityManager {
     private static ActivityManager sInstance = new ActivityManager();
-    private WeakReference<Activity> sCurrentActivityWeakRef;
+    private SoftReference<Activity> sCurrentActivityWeakRef;
 
     private ActivityManager() {
 
@@ -27,9 +27,9 @@ public class ActivityManager {
     /**
      * Method: setCurrentActivity
      * Description: 获取当前显示的视图引用
-     * @return  WeakReference<Activity>
+     * @return  SoftReference<Activity>
      */
-    public WeakReference<Activity> getCurrentActivity() {
+    public SoftReference<Activity> getCurrentActivity() {
         return sCurrentActivityWeakRef;
     }
 
@@ -40,6 +40,6 @@ public class ActivityManager {
      * @return  void
      */
     public void setCurrentActivity(Activity activity) {
-        sCurrentActivityWeakRef = new WeakReference<Activity>(activity);
+        sCurrentActivityWeakRef = new SoftReference<Activity>(activity);
     }
 }
