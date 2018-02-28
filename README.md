@@ -23,7 +23,7 @@ allprojects {
 ```
 dependencies {
 
-    compile 'com.github.zhaoyangzhou:PermissionLibrary:v1.0'
+    compile 'com.github.zhaoyangzhou:PermissionLibrary:v1.0.4'
 	
 }
 ```
